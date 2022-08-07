@@ -1,0 +1,277 @@
+    /* body {
+        background: linear-gradient(276deg, #d9a067, #afaba7);
+        background-size: 400% 400%;
+        -webkit-animation: AnimationName 20s ease infinite;
+        -moz-animation: AnimationName 20s ease infinite;
+        -o-animation: AnimationName 20s ease infinite;
+        animation: AnimationName 20s ease infinite;
+    }
+
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 0% 71%
+        }
+
+        50% {
+            background-position: 100% 30%
+        }
+
+        100% {
+            background-position: 0% 71%
+        }
+    }
+
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 0% 71%
+        }
+
+        50% {
+            background-position: 100% 30%
+        }
+
+        100% {
+            background-position: 0% 71%
+        }
+    }
+
+    @-o-keyframes AnimationName {
+        0% {
+            background-position: 0% 71%
+        }
+
+        50% {
+            background-position: 100% 30%
+        }
+
+        100% {
+            background-position: 0% 71%
+        }
+    }
+
+    @keyframes AnimationName {
+        0% {
+            background-position: 0% 71%
+        }
+
+        50% {
+            background-position: 100% 30%
+        }
+
+        100% {
+            background-position: 0% 71%
+        }
+    } */
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (max-width: 750px) {
+    #background-video {
+        display: none;
+    }
+
+    body {
+        background: url("../images/backgroundvideo.mp4") no-repeat;
+        background-size: cover;
+    }
+}
+
+.table-responsive {
+    max-height: 250px;
+    overflow-y: auto;   
+    scroll-behavior: smooth;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#scroll::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+}
+
+#scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #030203, #ede7e1) !important;
+    border-radius: 5px;
+}
+
+#table {
+    font-family: "Fester", sans-serif !important;
+    margin-top: 25px;
+    border-radius: 10px !important;
+    background-blend-mode: lighten;
+    color: whitesmoke;
+    font-size: 19px;
+}
+
+#title {
+    font-size: 60px;
+    font-family: "Fester", sans-serif !important;
+    font-display: swap;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    background: transparent;
+    width: 500px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#form {
+    background: transparent;
+    border-radius: 10px;
+    width: 900px;
+    margin-left: 10px;
+    font-family: "Fester", sans-serif !important;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+}
+
+#input1 {
+    display: inline-block;
+    width: 270px;
+    margin-left: 20px;
+    margin-top: 10px;
+   
+}
+
+#input2 {
+    display: inline-block;
+    width: 270px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#input3 {
+    display: inline-block;
+    width: 270px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+#input4 {
+    display: inline-block;
+    width: 270px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+
+#input5 {
+    display: inline-block;
+    width: 270px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+
+.form-control {
+    background: transparent;
+    color: #ffffff;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px #ffffff;
+    font-size: 20px;   
+}
+.form-control:-ms-input-placeholder {
+    color: #ffffff;
+    background-color: transparent;
+}
+.form-control:placeholder-shown {
+    color: #ffffff;
+    background-color: transparent;
+}
+.form-control:-ms-input-placeholder {
+    color: #ffffff;
+    background-color: transparent;
+}
+.form-control::-webkit-input-placeholder {
+    color: #ffffff;
+    background-color: transparent;
+}
+.form-control::placeholder {
+    color: #ffffff;
+    background-color: transparent;
+}
+.form-control:-moz-placeholder {
+    color: #ffffff;
+    background-color: transparent;
+}
+.form-control::-moz-placeholder {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+
+#btn {
+    display: inline-block;
+    margin-left: 140px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px #ffffff;
+    color: #ffffff;
+    font-size: 19px;
+
+}
+
+#delete {
+    display: inline-block;
+    margin-bottom: 10px;
+    box-shadow: 0 0 0 0.2rem rgba(249, 248, 246, 0.25);
+    font-family: "Fester", sans-serif !important;
+    color: #ffffff;
+    font-size: 19px;
+    
+}
+
+
+#edit {
+    display: inline-block;
+    margin-bottom: 10px;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-family: "Fester", sans-serif !important;
+}
+#alert {
+    display: inline;
+    margin-top: 50px;
+    width: 250px;
+    height: 20px;
+    font-size: 19px;
+    margin-left: 10px;
+    background-color: #259192   ;
+    color: white;
+    font-family: "Fester", sans-serif !important;
+
+
+}
+#alert2 {
+margin-top: 20px;
+
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#radio1 {
+    background-color: #969492;
+    font-family: "Fester", sans-serif !important;
+    box-shadow: 0px 0px 10px #ffffff;
+}
+#radio2 {
+    background-color: #918d8a;
+    font-family: "Fester", sans-serif !important;
+    box-shadow: 0px 0px 10px #ffffff;
+}
