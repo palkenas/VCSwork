@@ -17,6 +17,7 @@ include './base.php';
     <title>Plants</title>
 </head>
 
+
 <body>
     <video id="background-video" autoplay loop muted poster="./images/pexels-yaroslav-shuraev-5562986.mp4">
         <source src="./images/pexels-yaroslav-shuraev-5562986.mp4" type="video/mp4">
@@ -52,13 +53,16 @@ include './base.php';
                     </div>
                     <?= isset($_POST['edit']) ? '<input type="hidden" name="id" value="' . $plant->id . '">' : "" ?>
                     <button id="btn" class="btn btn-outline-dark" type="submit" name=<?= isset($_POST['edit']) ? '"update" > Atnaujinti' : '"save" > Išsaugoti' ?> </button>
-                    <a id="link" href="./table.php" class="btn btn-outline-dark" role="button">Visa lentelė</a>
+                        <a id="link" href="./table.php" class="btn btn-outline-dark" role="button">Visa lentelė</a>
+                        <a id="linkformal" href="./formal.php" class="btn btn-outline-dark" role="button">Formalus dizainas</a>
+                        <a id="linkindigo" href="./indigo.php" class="btn btn-outline-dark" role="button">80-ųjų dizainas</a>
                 </div>
             </form>
         </div>
     </div>
     <div id="alert2">
-        <?php if (isset($_SESSION) && isset($_SESSION['errors'])) {
+        <?php
+        if (isset($_SESSION) && isset($_SESSION['errors'])) {
             foreach ($_SESSION['errors'] as $error) { ?>
                 <div id="alert" class="alert alert-danger" role="allert">
                     <?= $error; ?>
@@ -110,5 +114,10 @@ include './base.php';
         </div>
 </body>
 
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
 
 </html>

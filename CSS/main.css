@@ -184,21 +184,22 @@
 }
 
 #alert {
-    display: inline;
-    margin-top: 50px;
-    width: 250px;
-    height: 20px;
-    font-size: 19px;
-    margin-left: 220px;
-    background-color: #259192;
-    color: white;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: #0e0d0d;
     font-family: "Fester", sans-serif !important;
-
-
+    font-size: 19px;
 }
 
 #alert2 {
-    margin-top: 20px;
+    display: inline;
+    width: 200px !important;
+    height: 30px;
+    font-size: 19px;
+    margin-left: 10px;
+    color: white;
+    font-family: "Fester", sans-serif !important;
 
 }
 
@@ -239,10 +240,23 @@
 }
 
 #btnback {
-        display: inline-block;
-            margin-left: 400px;
-            box-shadow: 0px 0px 10px #ffffff;
-            color: #ffffff;
-            font-size: 19px;
-            font-family: "Fester", sans-serif !important;
+    display: inline-block;
+    margin-left: 400px;
+    box-shadow: 0px 0px 10px #ffffff;
+    color: #ffffff;
+    font-size: 19px;
+    font-family: "Fester", sans-serif !important;
+}
+
+#linkformal {
+    display: inline;
+    margin-left: 20px;
+    margin-top: -10px;
+
+}
+
+#linkindigo {
+    display: inline;
+    margin-top: -10px;
+
 }

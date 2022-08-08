@@ -8,7 +8,6 @@ class DB {
         $pass = "";
         $dbname = "plants";
         $this->conn = new mysqli($servername, $user, $pass, $dbname);
-        // print_r($this->conn);
     }
 }
 ?>

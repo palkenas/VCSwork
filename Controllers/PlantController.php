@@ -21,26 +21,31 @@ class PlantController {
             $hasErrors = true;
             $_SESSION['errors'][] = "Patikslinkite augalo pavadinimą";
         }
+        if (($_POST['age']) <= 0 || ($_POST['height']) <= 0)  {
+            $hasErrors = true;
+            $_SESSION['errors'][] = "Augalo amžius/aukštis negali būti neigiamas skaičius";
+        }
 
         if ((is_numeric($_POST['age']) == false) || is_numeric($_POST['height']) == false) {
             $hasErrors = true;
             $_SESSION['errors'][] = "Patikslinkite augalo amžių/aukštį";
         }
 
-        if (strlen($_POST['namelt']) > 20) {
-            $_SESSION['errors'][] = "Lietuviškas pavadinimas negali būti ilgesnis nei 20 simbolių";
+        if ((strlen($_POST['namelt']) > 30) || (strlen($_POST['namelat']) > 30)) {
+            $_SESSION['errors'][] = "Pavadinimas negali būti ilgesnis nei 30 simbolių";
             $hasErrors = true;
         }
-        if (strlen($_POST['namelat']) > 30) {
-            $_SESSION['errors'][] = "Lotyniškas pavadinimas negali būti ilgesnis nei 30 simbolių";
+        if (strlen($_POST['namelt']) < 3    || strlen($_POST['namelat']) < 3) {
+            $_SESSION['errors'][] = "Pavadinimas negali būti trumpesnis nei 3 simboliai";
             $hasErrors = true;
         }
+
         if (strlen($_POST['age']) > 5) {
-            $_SESSION['errors'][] = "Augalo amžius negali būti ilgesnis nei 5 simboliai";
+            $_SESSION['errors'][] = "Augalo amžius negali būti ilgesnis nei 5 simbolių skaičius";
             $hasErrors = true;
         }
-        if (strlen($_POST['height']) > 5) {
-            $_SESSION['errors'][] = "Augalo aukštis negali būti ilgesnis nei 5 simboliai";
+        if (strlen($_POST['height']) > 4) {
+            $_SESSION['errors'][] = "Augalo aukštis negali būti ilgesnis nei 4 simbolių skaičius";
             $hasErrors = true;
         }
         if ($hasErrors) {
@@ -50,7 +55,7 @@ class PlantController {
             return false;
         }
     }
-    
+            
 
     public static function destroy()
     {
@@ -67,26 +72,31 @@ class PlantController {
             $hasErrors = true;
             $_SESSION['errors'][] = "Patikslinkite augalo pavadinimą";
         }
+        if(($_POST['age']) <= 0 || ($_POST['height']) <= 0){
+            $hasErrors = true;
+            $_SESSION['errors'][] = "Augalo amžius/aukštis negali būti 0 arba   neigiamas skaičius";
+        }
         
         if((is_numeric($_POST['age']) == false)||is_numeric($_POST['height']) == false){
             $hasErrors = true;
             $_SESSION['errors'][] = "Patikslinkite augalo amžių/aukštį";
         }
-
-        if(strlen($_POST['namelt']) > 20){
-            $_SESSION['errors'][] = "Lietuviškas pavadinimas negali būti ilgesnis nei 20 simbolių";
+    
+        if((strlen($_POST['namelt']) > 30) || (strlen($_POST['namelat']) > 30)){
+            $_SESSION['errors'][] = "Pavadinimas negali būti ilgesnis nei 30 simbolių";
             $hasErrors = true;
         }
-        if(strlen($_POST['namelat']) > 30){
-            $_SESSION['errors'][] = "Lotyniškas pavadinimas negali būti ilgesnis nei 30 simbolių";
+        if (strlen($_POST['namelt']) < 3    || strlen($_POST['namelat']) < 3) {
+            $_SESSION['errors'][] = "Pavadinimas negali būti trumpesnis nei 3 simboliai";
             $hasErrors = true;
         }
+        
         if(strlen($_POST['age']) > 5){
-            $_SESSION['errors'][] = "Augalo amžius negali būti ilgesnis nei 5 simboliai";
+            $_SESSION['errors'][] = "Augalo amžius negali būti ilgesnis nei 5 simbolių skaičius";
             $hasErrors = true;
         }
-        if (strlen($_POST['height']) > 5) {
-            $_SESSION['errors'][] = "Augalo aukštis negali būti ilgesnis nei 5 simboliai";
+        if (strlen($_POST['height']) > 4) {
+            $_SESSION['errors'][] = "Augalo aukštis negali būti ilgesnis nei 4 simbolių skaičius";
             $hasErrors = true;
         }
         if($hasErrors){
