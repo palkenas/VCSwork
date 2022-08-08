@@ -181,3 +181,10 @@ button:focus {
 #radio2 {
     background-color: #ff38d4;
 }
+
+#linktable {
+    display: inline-block;
+    margin-left: 600px;
+    margin-top: -190px;
+    box-shadow: 0px 0px 10px #ffffff;
+}

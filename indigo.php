@@ -55,7 +55,8 @@ include './base.php';
                     <?= isset($_POST['edit']) ? '<input type="hidden" name="id" value="' . $plant->id . '">' : "" ?>
                     <button id="btn" class="btn btn-outline-dark" type="submit" name=<?= isset($_POST['edit']) ? '"update" > Atnaujinti' : '"save" > Išsaugoti' ?> </button>
                         <a id="linkformal" href="./formal.php" class="btn btn-outline-dark" role="button">Formalus dizainas</a>
-                        <a id="linkindigo" href="./index.php" class="btn btn-outline-dark" role="button">Šiuolaikinis dizainas</a>
+                        <a id="linkcont" href="./index.php" class="btn btn-outline-dark" role="button">Šiuolaikinis dizainas</a>
+                        <a id="linktable" href="./tableindigo.php" class="btn btn-outline-dark" role="button">Visa lentelė</a>
             </form>
         </div>
     </div>

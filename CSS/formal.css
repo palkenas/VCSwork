@@ -213,3 +213,9 @@ body {
     background-color: #918d8a;
     font-family: "Fester", sans-serif !important;
 }
+#linktable {
+    display: inline-block;
+    margin-left: 610px;
+    margin-top: -210px;
+    box-shadow: 0 0 0 0.2rem rgba(3, 3, 3, 0.25);
+}
