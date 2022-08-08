@@ -1,31 +1,5 @@
 <?php
-include './controllers/PlantController.php';
-
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    if (isset($_POST['save'])) {
-        $hasErrors = PlantController::store();
-        if (!$hasErrors) {
-            header("Location:" . $_SERVER['REQUEST_URI']);
-        }
-    }
-    if (isset($_POST['edit'])) {
-        $plant = PlantController::show();
-    }
-    if (isset($_POST['update'])) {
-        if (isset($_POST['update'])) {
-            $hasErrors = PlantController::update();
-            if (!$hasErrors) {
-                header("Location:" . $_SERVER['REQUEST_URI']);
-            }
-        }
-    }
-    if (isset($_POST['destroy'])) {
-        PlantController::destroy();
-        header("Location:" . $_SERVER['REQUEST_URI']);
-    }
-}
-$plants = PlantController::index();
-
+include './base.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,8 +18,8 @@ $plants = PlantController::index();
 </head>
 
 <body>
-    <video id="background-video" autoplay loop muted poster="./images/backgroundvideo.mp4">
-        <source src="./images/backgroundvideo.mp4" type="video/mp4">
+    <video id="background-video" autoplay loop muted poster="./images/pexels-yaroslav-shuraev-5562986.mp4">
+        <source src="./images/pexels-yaroslav-shuraev-5562986.mp4" type="video/mp4">
     </video>
     <div class="container">
         <div id="title">
@@ -78,6 +52,8 @@ $plants = PlantController::index();
                     </div>
                     <?= isset($_POST['edit']) ? '<input type="hidden" name="id" value="' . $plant->id . '">' : "" ?>
                     <button id="btn" class="btn btn-outline-dark" type="submit" name=<?= isset($_POST['edit']) ? '"update" > Atnaujinti' : '"save" > Išsaugoti' ?> </button>
+                    <a id="link" href="./table.php" class="btn btn-outline-dark" role="button">Visa lentelė</a>
+                </div>
             </form>
         </div>
     </div>
@@ -96,7 +72,7 @@ $plants = PlantController::index();
     <div class="container">
         <div id="scroll" class="table-responsive">
             <table id="table" class="table table-transparent">
-                <thead>             
+                <thead>
                     <tr>
                         <th scope="col"><i>Lietuviškas pavadinimas</i></th>
                         <th scope="col"><i>Lotyniškas pavadinimas</i></th>
@@ -134,6 +110,5 @@ $plants = PlantController::index();
         </div>
 </body>
 
-<script src="./JS/main.js"></script>
 
 </html>
