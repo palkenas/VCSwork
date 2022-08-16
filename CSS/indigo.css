@@ -149,10 +149,10 @@ button:focus {
 }
 
 #alert {
-    display: inline;
+    display: inline-block;
     margin-top: 50px;
     width: 250px;
-    height: 20px;
+    height: 70px;
     font-size: 15px;
     margin-left: 10px;
     background-color: #ff38d4;
@@ -187,4 +187,11 @@ button:focus {
     margin-left: 600px;
     margin-top: -190px;
     box-shadow: 0px 0px 10px #ffffff;
+}
+#btnback {
+    display: inline-block;
+    box-shadow: 0px 0px 10px #ffffff;
+    color: #ffffff;
+    font-size: 19px;
+    font-family: "Cirulis display", sans-serif !important;
 }

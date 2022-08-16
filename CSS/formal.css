@@ -213,9 +213,18 @@ body {
     background-color: #918d8a;
     font-family: "Fester", sans-serif !important;
 }
+
 #linktable {
     display: inline-block;
     margin-left: 610px;
     margin-top: -210px;
     box-shadow: 0 0 0 0.2rem rgba(3, 3, 3, 0.25);
+}
+
+#btnback {
+    display: inline-block;
+    box-shadow: 0px 0px 10px #ffffff;
+    color: #ffffff;
+    font-size: 19px;
+    font-family: "Fester", sans-serif !important;
 }
